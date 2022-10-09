@@ -44,7 +44,7 @@ public class CharactersInPlay {
         {
             if (line.indexOf(".") != -1)
             {
-               String name = line.substring(0, line.indexOf("."));
+               String name = line.substring(0, line.indexOf(".")).trim();
                update(name);
             }
         }
@@ -52,13 +52,16 @@ public class CharactersInPlay {
     
     private void charactersWithNumParts(int num1, int num2){
         System.out.println("Names of all those characters that have between " + num1 + " and " + num2 + " lines:");
+        int count = 0;
         for (int i = 0; i < names.size(); i++)
         {
             if (freqs.get(i) >= num1 && freqs.get(i)<= num2)
             {
                System.out.println(names.get(i) + "\t" + freqs.get(i));
+               count++;
             }
         }
+        System.out.println(count);
     }
     
     public void tester()
@@ -67,7 +70,7 @@ public class CharactersInPlay {
         
         for(int i=0; i < names.size(); i++)
         {
-            if (freqs.get(i) > 1)
+            if (freqs.get(i) > 50)
             {
                 System.out.println("word: " + names.get(i) + ", Freq: " + freqs.get(i));
             }
