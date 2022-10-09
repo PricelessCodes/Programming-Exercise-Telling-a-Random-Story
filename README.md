@@ -29,13 +29,21 @@ For example, if the file were testwordfreqs.txt:
 Then the output would be:
 
 Number of unique words: 7
+
 1 this
+
 1 is
+
 3 a
+
 3 test.
+
 1 yes
+
 1 test
+
 1 of
+
 The word that occurs most often and its count are: a 3
 
 We are ignoring punctuation, so note that “test.” and “test” are different, as the first one has a period with it. Also note that there is a tie—two words are counted three times; you should return the first such word found which is “a”.
